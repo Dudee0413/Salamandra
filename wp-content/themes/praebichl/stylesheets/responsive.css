@@ -1,0 +1,445 @@
+/* ==============================================
+   RESZPONZIV STILUSOK — praebichl.net
+   Lablec: minden nezeten latszik
+   Mobil layout: csak max-width: 960px-en aktiv
+================================================ */
+
+/* --- Mobil fooldal: desktop-on rejtett --- */
+#mobile-home {
+    display: none;
+}
+
+/* --- Lablec: minden nezeten --- */
+#site-footer {
+    background: rgba(0, 0, 0, 0.85);
+    border-top: 2px solid #4a7a3a;
+    color: #ccc;
+    font-family: "Trebuchet MS", Arial, sans-serif;
+    font-size: 14px;
+    text-align: center;
+    padding: 20px 15px;
+    margin-top: 20px;
+    clear: both;
+}
+
+#site-footer p {
+    margin: 6px 0;
+    color: #ccc;
+    font-size: 14px;
+    text-shadow: none;
+    line-height: 1.5;
+}
+
+#site-footer a {
+    color: #8ab4f8;
+    text-decoration: none;
+}
+
+#site-footer a:hover {
+    text-decoration: underline;
+}
+
+#mobile-nav {
+    display: none;
+}
+
+@media only screen and (max-width: 960px) {
+
+    /* --- Hamburger nav megjelenites --- */
+    #mobile-nav {
+        display: block;
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: 99999;
+    }
+
+    #hamburger-btn {
+        display: block;
+        width: 100%;
+        padding: 14px 20px;
+        background: rgba(10, 30, 10, 0.97);
+        color: #fff;
+        border: none;
+        border-bottom: 2px solid #4a7a3a;
+        font-size: 20px;
+        font-family: "Trebuchet MS", Arial, sans-serif;
+        text-align: left;
+        cursor: pointer;
+        letter-spacing: 1px;
+    }
+
+    #mobile-menu {
+        background: rgba(10, 30, 10, 0.97);
+        display: none;
+        max-height: calc(100vh - 52px);
+        overflow-y: auto;
+        border-bottom: 2px solid #4a7a3a;
+    }
+
+    #mobile-menu.open {
+        display: block;
+    }
+
+    #mobile-menu ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+    }
+
+    #mobile-menu li {
+        border-bottom: 1px solid rgba(255,255,255,0.08);
+        margin: 0;
+        line-height: normal;
+    }
+
+    #mobile-menu a {
+        display: block;
+        padding: 13px 20px;
+        color: #e8f5e8;
+        text-decoration: none;
+        font-size: 17px;
+        font-family: "Trebuchet MS", Arial, sans-serif;
+    }
+
+    #mobile-menu a:hover {
+        background: rgba(255,255,255,0.1);
+        color: #fff;
+    }
+
+    #mobile-menu .sub-toggle {
+        display: block;
+        padding: 13px 20px;
+        color: #e8f5e8;
+        font-size: 17px;
+        font-family: "Trebuchet MS", Arial, sans-serif;
+        cursor: pointer;
+    }
+
+    #mobile-menu .sub-toggle::after {
+        content: ' \25be';
+        font-size: 14px;
+    }
+
+    #mobile-menu .sub-toggle.open::after {
+        content: ' \25b4';
+    }
+
+    #mobile-menu .sub-toggle:hover {
+        background: rgba(255,255,255,0.1);
+    }
+
+    #mobile-menu .submenu {
+        display: none;
+        background: rgba(0,0,0,0.25);
+    }
+
+    #mobile-menu .submenu.open {
+        display: block;
+    }
+
+    #mobile-menu .submenu a {
+        padding-left: 38px;
+        font-size: 15px;
+        color: #c8e8c8;
+    }
+
+    #mobile-menu .fb-links {
+        display: flex;
+        justify-content: space-around;
+        padding: 5px 0;
+    }
+
+    #mobile-menu .fb-links a {
+        font-size: 15px;
+        color: #8ab4f8;
+        padding: 13px 10px;
+    }
+
+    /* --- Regi kep-alapu menu + slideshow elrejtese --- */
+    .header {
+        display: none !important;
+    }
+
+    /* --- Tartalom elrendezese --- */
+    body {
+        padding-top: 52px;
+    }
+
+    .container {
+        width: 100% !important;
+        overflow-x: hidden;
+    }
+
+    .content {
+        width: 100% !important;
+        padding: 10px 0 !important;
+    }
+
+    .two-thirds.column,
+    .column,
+    .columns {
+        width: 100% !important;
+        display: block !important;
+        float: none !important;
+        margin: 0 !important;
+    }
+
+    .main {
+        width: 100% !important;
+        min-height: 0 !important;
+        padding: 10px !important;
+        box-sizing: border-box;
+    }
+
+    /* --- Papir elemek — JS is felulirja az inline stílusokat --- */
+    .papir {
+        position: static !important;
+        top: auto !important;
+        left: auto !important;
+        width: auto !important;
+        height: auto !important;
+        min-height: 0 !important;
+        max-width: 100% !important;
+        margin: 12px auto !important;
+        padding: 15px 12px !important;
+        box-sizing: border-box;
+        background-size: 100% 100% !important;
+    }
+
+    .szog {
+        display: none !important;
+    }
+
+    /* --- Kepek reszponziv --- */
+    img {
+        max-width: 100% !important;
+        height: auto !important;
+    }
+
+    /* --- Videok reszponziv wrapper --- */
+    .video-wrapper {
+        position: relative;
+        padding-bottom: 56.25%;
+        height: 0;
+        overflow: hidden;
+        margin: 10px 0;
+    }
+
+    .video-wrapper iframe {
+        position: absolute !important;
+        top: 0 !important;
+        left: 0 !important;
+        width: 100% !important;
+        height: 100% !important;
+    }
+
+    /* --- Tablazatok gorgethetoek --- */
+    table {
+        display: block !important;
+        width: 100% !important;
+        overflow-x: auto;
+        position: static !important;
+        margin: 10px 0 !important;
+    }
+
+    /* --- Partnerek kepek --- */
+    .partnerek {
+        width: 100% !important;
+        left: auto !important;
+        position: static !important;
+        top: auto !important;
+    }
+
+    .partnerek table td {
+        display: inline-block;
+        padding: 8px;
+    }
+
+    /* --- Title div --- */
+    .title {
+        width: auto !important;
+        margin: 10px 5px !important;
+    }
+
+    /* --- Slideshow kepek (ha latszik) --- */
+    .nivoSlider img,
+    #metaslider_400 img {
+        max-width: 100% !important;
+        height: auto !important;
+    }
+
+    /* --- Szoveg merete --- */
+    .main p {
+        font-size: 16px !important;
+    }
+
+    /* =============================================
+       MOBIL FOOLDAL
+    ============================================= */
+
+    /* Fooldal videok elrejtese mobilon */
+    body.home #post-4 .papir {
+        display: none !important;
+    }
+
+    /* Mobil fooldal megjelenites */
+    #mobile-home {
+        display: block;
+    }
+
+    /* Hero foto — slideshow */
+    #mobile-hero {
+        min-height: 260px;
+        display: flex;
+        align-items: flex-end;
+        position: relative;
+        overflow: hidden;
+        background: #111;
+    }
+
+    /* A hatter-reteg: ez fade-el, a szoveg nem villog */
+    #mobile-hero-bg {
+        position: absolute;
+        inset: 0;
+        background: center/cover no-repeat;
+        background-image: url('../../../uploads/2017/05/slide4.jpg');
+        transition: opacity 0.9s ease;
+        z-index: 0;
+    }
+
+    /* Sotet gradient a szoveg olvashatosagarert */
+    #mobile-hero::after {
+        content: '';
+        position: absolute;
+        inset: 0;
+        background: linear-gradient(to bottom, rgba(0,0,0,0.05) 0%, rgba(0,0,0,0.65) 100%);
+        pointer-events: none;
+        z-index: 1;
+    }
+
+    #mobile-hero-text {
+        position: relative;
+        z-index: 2;
+        padding: 20px 18px 18px;
+        color: #fff;
+        width: 100%;
+    }
+
+    #mobile-hero-text h1 {
+        font-size: 26px;
+        font-family: "Monotype Corsiva", "Trebuchet MS", Arial, sans-serif;
+        color: #fff;
+        text-shadow: 1px 2px 6px rgba(0,0,0,0.8);
+        margin-bottom: 5px;
+        line-height: 1.2;
+    }
+
+    #mobile-hero-text p {
+        font-size: 15px;
+        color: #ddd;
+        text-shadow: 1px 1px 3px rgba(0,0,0,0.8);
+        margin: 0;
+        font-family: "Trebuchet MS", Arial, sans-serif;
+    }
+
+    /* Gyors navigacios kartyak 3x2-es racs */
+    #mobile-quicknav {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 6px;
+        padding: 10px;
+        background: rgba(0,0,0,0.5);
+    }
+
+    .qnav-card {
+        background: rgba(255,255,255,0.12);
+        border: 1px solid rgba(255,255,255,0.18);
+        border-radius: 7px;
+        padding: 12px 6px;
+        text-align: center;
+        color: #fff;
+        text-decoration: none;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-family: "Trebuchet MS", Arial, sans-serif;
+        font-size: 14px;
+        font-weight: bold;
+        min-height: 48px;
+        transition: background 0.15s;
+    }
+
+    .qnav-card:hover, .qnav-card:active {
+        background: rgba(255,255,255,0.25);
+        text-decoration: none;
+        color: #fff;
+    }
+
+    /* Bevezeto szoveg + CTA gombok */
+    #mobile-intro {
+        padding: 18px 16px 10px;
+        text-align: center;
+    }
+
+    #mobile-intro p {
+        color: #ddd;
+        font-family: "Trebuchet MS", Arial, sans-serif;
+        font-size: 15px;
+        line-height: 1.6;
+        text-shadow: none;
+        margin-bottom: 14px;
+        font-weight: normal !important;
+    }
+
+    .mobile-cta {
+        display: inline-block;
+        background: #4a7a3a;
+        color: #fff;
+        padding: 10px 20px;
+        border-radius: 6px;
+        font-size: 15px;
+        font-family: "Trebuchet MS", Arial, sans-serif;
+        text-decoration: none;
+        margin: 4px;
+        font-weight: bold;
+    }
+
+    .mobile-cta:hover {
+        background: #5a9a45;
+        color: #fff;
+        text-decoration: none;
+    }
+
+    .mobile-cta-sec {
+        background: rgba(255,255,255,0.15);
+        border: 1px solid rgba(255,255,255,0.3);
+    }
+
+    .mobile-cta-sec:hover {
+        background: rgba(255,255,255,0.25);
+    }
+
+    /* Telefonszam + email */
+    #mobile-contacts {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 6px;
+        padding: 10px 16px 18px;
+        border-top: 1px solid rgba(255,255,255,0.1);
+        margin-top: 6px;
+    }
+
+    #mobile-contacts a {
+        color: #8ab4f8;
+        font-family: "Trebuchet MS", Arial, sans-serif;
+        font-size: 15px;
+        text-decoration: none;
+    }
+
+    #mobile-contacts a:hover {
+        text-decoration: underline;
+    }
+}

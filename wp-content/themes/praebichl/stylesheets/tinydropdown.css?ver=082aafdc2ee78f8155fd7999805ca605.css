@@ -1,0 +1,89 @@
+.nav {
+	height:36px; 
+	background:#aaa; 
+	color:#fff; 
+	text-shadow:1px 1px #888; 
+	z-index:1000
+}
+
+
+.turamenu {
+	list-style:none; 
+	font:16px Arial,Verdana; 
+	text-align:center; 
+	/*width:200px; */
+	margin:0 auto;
+}
+
+.turamenu li {
+	position:relative; 
+	float:left; 
+	/*width:120px; */
+	z-index:1000;
+}
+
+.turamenu ul {
+	display:none; 
+	position:absolute; 
+	font:normal 13px Arial,Verdana; 
+	top:-190px; 
+	left:-220px; 
+	display:none; 
+	list-style:none;
+}
+
+.turamenu ul li {
+	float:none; 
+	width:192px;
+	height: 38px;
+	margin: 0;
+	padding: 0;
+}
+
+
+.turamenu ul ul {
+	left:120px; 
+	top:0;
+}
+
+
+
+.egyebmenu {
+	list-style:none; 
+	font:16px Arial,Verdana; 
+	text-align:center; 
+	/*width:200px; */
+	margin:0 auto;
+}
+
+.egyebmenu li {
+	position:relative; 
+	float:left; 
+	/*width:120px; */
+	z-index:1000;
+}
+
+.egyebmenu ul {
+	display:none; 
+	position:absolute; 
+	font:normal 13px Arial,Verdana; 
+	top:-342px; 
+	left:-220px; 
+	display:none; 
+	list-style:none;
+}
+
+.egyebmenu ul li {
+	float:none; 
+	width:192px;
+	height: 38px;
+	margin: 0;
+	padding: 0;
+}
+
+
+.egyebmenu ul ul {
+	left:120px; 
+	top:0;
+}
+
